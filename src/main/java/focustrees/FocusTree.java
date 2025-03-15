@@ -36,4 +36,38 @@ public class FocusTree {
     {
         focuses.add(f);
     }
+
+    /**
+     * Returns the FocusTree's country code
+     * @return String
+     */
+    public String getCountryCode() {
+        return countryCode;
+    }
+
+    /**
+     * Sets the FocusTree's country code
+     * @param countryCode 
+     */
+    public void setCountryCode(String countryCode) {
+        this.countryCode = countryCode;
+    }
+
+    /**
+     * Returns the FocusTree's focuses
+     * @return LinkedList<Focus> focuses
+     */
+    public LinkedList<Focus> getFocuses() {
+        return focuses;
+    }
+
+    /**
+     * Sets the FocusTree's focuses
+     * @param focuses 
+     */
+    public void setFocuses(LinkedList<Focus> focuses) {
+        this.focuses = focuses;
+    }
+    
+    
 }

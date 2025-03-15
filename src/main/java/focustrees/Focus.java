@@ -1,5 +1,6 @@
 package focustrees;
 
+import appendix.LinkedList;
 import appendix.Position;
 
 /**
@@ -12,8 +13,40 @@ public class Focus {
     private String description;
     private int duration; //in days
     private Position position;
+    private LinkedList<Focus> required = new LinkedList<Focus>();
     private String code;
-
+    
+    /**
+     * Constructor taking the Focus' name as a parameter
+     * @param n 
+     */
+    public Focus(String n)
+    {
+        name = n;
+    }
+    
+    /**
+     * Constructor taking the Focus' name and the required Focus
+     * @param n
+     * @param f 
+     */
+    public Focus(String n, Focus f)
+    {
+        name = n;
+        required.add(f);
+    }
+    
+    /**
+     * Constructor taking the Focus' name and the LinkedList<Focus> with required focuses
+     * @param n
+     * @param f 
+     */
+    public Focus(String n, LinkedList<Focus> f)
+    {
+        name = n;
+        required = f;
+    }
+    
     /**
      * Returns the focus' name
      * @return String
@@ -100,6 +133,45 @@ public class Focus {
      */
     public void setCode(String code) {
         this.code = code;
+    }
+
+    /**
+     * Returns the LinkedList with all required focuses
+     * @return LinkedList<Focus> required
+     */
+    public LinkedList<Focus> getRequired() {
+        return required;
+    }
+
+    /**
+     * Sets the required focuses
+     * @param required 
+     */
+    public void setRequired(LinkedList<Focus> required) {
+        this.required = required;
+    }
+    
+    /**
+     * Adds a focus to the list of required focuses
+     * @param f 
+     */
+    public void addRequired(Focus f)
+    {
+        required.add(f);
+    }
+    
+    /**
+     * Removes from required all focuses that are not present in the LinkedList given as parameter
+     * @param f 
+     */
+    public void keepFocuses(LinkedList<Focus> f)
+    {
+        for(int i = 0; i<required.size(); i++) {
+            if(!f.contains(required.get(i))) {
+                required.remove(i);
+                i--;
+            }
+        }
     }
     
 }
