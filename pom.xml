@@ -10,4 +10,20 @@
         <maven.compiler.release>17</maven.compiler.release>
         <exec.mainClass>com.mycompany.hoi4modbuilder.HOI4ModBuilder</exec.mainClass>
     </properties>
+    <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>4.0.0</version> <!-- Use the latest version if available -->
+            <configuration>
+                <archive>
+                    <manifest>
+                        <mainClass>modbuilder.Main</mainClass>
+                    </manifest>
+                </archive>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
 </project>

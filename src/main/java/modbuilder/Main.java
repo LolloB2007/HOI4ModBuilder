@@ -1,5 +1,6 @@
 package modbuilder;
 
+import java.io.FileNotFoundException;
 import java.util.concurrent.CountDownLatch;
 
 /**
@@ -13,7 +14,7 @@ public class Main {
      */
     public static final CountDownLatch latch = new CountDownLatch(1);
     
-    public static void main(String[]args) {
+    public static void main(String[]args) throws FileNotFoundException {
         
         Controller c = new Controller();
         

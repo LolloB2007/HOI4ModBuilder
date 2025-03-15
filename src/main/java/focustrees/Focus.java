@@ -1,5 +1,6 @@
 package focustrees;
 
+import appendix.Command;
 import appendix.LinkedList;
 import appendix.Position;
 
@@ -14,7 +15,7 @@ public class Focus {
     private int duration; //in days
     private Position position;
     private LinkedList<Focus> required = new LinkedList<Focus>();
-    private String code;
+    private LinkedList<Command> commands = new LinkedList<Command>();
     
     /**
      * Constructor taking the Focus' name as a parameter
@@ -121,18 +122,26 @@ public class Focus {
 
     /**
      * Returns the focus' Paradox code
-     * @return String
+     * @return LinkedList<String> commands
      */
-    public String getCode() {
-        return code;
+    public LinkedList<Command> getCommands() {
+        return commands;
     }
 
     /**
      * Sets the focus' Paradox code
-     * @param code 
+     * @param commands 
      */
-    public void setCode(String code) {
-        this.code = code;
+    public void setCommands(LinkedList<Command> commands) {
+        this.commands = commands;
+    }
+    
+    /**
+     * Adds a command to commands LinkedList
+     * @param c 
+     */
+    public void addCommand(Command c) {
+        commands.add(c);
     }
 
     /**
