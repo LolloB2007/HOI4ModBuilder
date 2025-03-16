@@ -42,7 +42,7 @@ public class Controller {
      * @param f
      * @throws IOException 
      */
-    public static void eraseFileContebt(File f) throws IOException
+    public static void ereaseFileContent(File f) throws IOException
     {
         FileWriter w = new FileWriter(f, false);
         
@@ -91,6 +91,49 @@ public class Controller {
                 exampleCommands.add(new Command(contents.get(i+1), contents.get(i+9)));
             }
         }
+    }
+    
+    /**
+     * Method that returns a row of an html table
+     * @param initIndex
+     * @param fileContents
+     * @return LinkedList<String> row
+     */
+    public LinkedList<String> extractTableRow(int initIndex, LinkedList<String> fileContents)
+    {
+        int finalIndex = 0;
+        boolean isFinished = false;
+        int counter = 0;
+        
+        while(!isFinished) {
+            if(fileContents.get(initIndex + counter).contains("</tr>")) {
+                finalIndex = initIndex + counter;
+                isFinished = true;
+            }
+            
+            counter++;
+        }
+        
+        LinkedList<String> row = new LinkedList<String>();
+        
+        for(int i = initIndex; i<=finalIndex; i++) {
+            row.add(fileContents.get(i));
+        }
+        
+        return row;
+    }
+    
+    /**
+     * Returns the elements within an html table's row.
+     * Index 0 is the name.
+     * Index 1 is the description.
+     * Index 2 is the code.
+     * @param row
+     * @return LinkedList<String> rowElements.
+     */
+    public LinkedList<String> extractRowElements(LinkedList<String> row) //to be written
+    {
+        return null;
     }
     
 }
