@@ -131,9 +131,34 @@ public class Controller {
      * @param row
      * @return LinkedList<String> rowElements.
      */
-    public LinkedList<String> extractRowElements(LinkedList<String> row) //to be written
+    public LinkedList<String> getRowElements(LinkedList<String> parsedRow)
     {
-        return null;
+        LinkedList<String> ret = new LinkedList<String>();
+        
+        ret.add(parsedRow.get(0));
+        ret.add(parsedRow.get(3));
+        ret.add(parsedRow.get(4));
+        
+        return ret;
+    }
+    
+    /**
+     * Returns the parsed row (with all html tags removed)
+     * @param row
+     * @return LinkedList<String> parsedRow
+     */
+    public LinkedList<String> htmlRowParser(LinkedList<String> row) //to be written
+    {
+        LinkedList<String> parsedRow = new LinkedList<String>();
+        
+        for(int i = 0; i<row.size(); i++) {
+            String cleanedText = row.get(i).replaceAll("<[^>]*>", "").trim();
+            if(cleanedText.length()>0) {
+                parsedRow.add(cleanedText);
+            }
+        }
+        
+        return parsedRow;
     }
     
 }
