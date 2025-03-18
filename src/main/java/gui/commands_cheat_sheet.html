@@ -687,21 +687,6 @@
 </td>
 <td>1.11
 </td></tr></tbody></table>
-<tbody><tr>
-<th width="5%">Name
-</th>
-<th width="10%">Usage
-</th>
-<th width="10%">Target type
-</th>
-<th width="23%">Example
-</th>
-<th width="37%">Description
-</th>
-<th width="5%">Usable as target
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="TAG">
 <td>TAG
 </td>
@@ -985,19 +970,6 @@ In <a href="/Decision_modding#targeted_decisions" title="Decision modding">targe
 </td>
 <td>1.5
 </td></tr></tbody></table>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="add_dynamic_modifier">
 <td>add_dynamic_modifier
 </td>
@@ -1117,11 +1089,13 @@ days = &lt;int&gt;<br />The amount of days that the flag should last for before 
 </td>
 <td>&lt;string&gt;<br />A localized string to display in the tooltip.
 </td>
-<td><pre>custom_effect_tooltip = my_tooltip_tt</pre>
+<td><pre>custom_effect_tooltip = my_tooltip_tt</pre></td>
+<td>
 <pre>custom_effect_tooltip = {
     localization_key = my_loc
     NESTEDLOC = myotherloc/string
 }</pre>
+</td>
 </td>
 <td>Displays a localized key in the effect tooltip.
 </td>
@@ -1697,24 +1671,6 @@ terrain_factor = &lt;decimal&gt;<br />The modifier applied to terrain bonuses. D
 </td>
 <td>1.5
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Variables">Variables</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=7" class="mw-editsection-visualeditor" title="Edit section: Variables">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=7" title="Edit section: Variables">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<dl><dd><i>This section is transcluded from <a href="/Data_structures#Operators" title="Data structures">Data structures&#160;§ Operators</a></i><br /></dd></dl>
-<p>The following is a list of variable-related effects and triggers. Variable-modifying effects have an equivalent for temporary variables, with temp_variable being used instead of variable, and these temporary variable operators are also valid triggers, as described above. Every operator can be used with variables that do not exist, assuming a value of 0 unless a null-coalescing operator is used.
-</p>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption><span style="white-space:nowrap">Variable-related arguments:</span>
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="20%">Notes
-</th></tr>
 <tr id="set_variable">
 <td>set_variable
 </td>
@@ -1928,22 +1884,6 @@ max = &lt;decimal&gt;/&lt;variable&gt;<br />The maximum value of the variable af
 </td>
 <td>???
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Arrays">Arrays</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=8" class="mw-editsection-visualeditor" title="Edit section: Arrays">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=8" title="Edit section: Arrays">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<dl><dd><i>See also: <a href="/Arrays" class="mw-redirect" title="Arrays">Arrays</a></i><br /></dd></dl>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption><span style="white-space:nowrap">Effects for modifying arrays:</span>
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="20%">Notes
-</th></tr>
 <tr id="add_to_array">
 <td>add_to_array
 </td>
@@ -2047,26 +1987,6 @@ index = &lt;variable&gt;<br />The temporary variable where the index of the smal
 </td>
 <td>Either value or index are optional to specify.
 </td></tr></tbody></table>
-<h2><span class="mw-headline" id="Country_scope">Country scope</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=9" class="mw-editsection-visualeditor" title="Edit section: Country scope">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=9" title="Edit section: Country scope">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>The effects here must be used within a <b>country</b> scope.
-</p>
-<h3><span class="mw-headline" id="General_2">General</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=10" class="mw-editsection-visualeditor" title="Edit section: General">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=10" title="Edit section: General">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">General country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="set_country_flag">
 <td>set_country_flag
 </td>
@@ -2413,8 +2333,6 @@ days = &lt;int&gt;<br />The amount of days that the flag should last for before 
 <td>Control over deployed units go to overlord
 </td>
 <td>Only has an effect for subjects.
-</td></tr></tbody></table>
-</td></tr></tbody></table>
 </td>
 <td>1.0
 </td></tr>
@@ -2632,25 +2550,6 @@ value = &lt;int&gt;<br />The weighting added by the strategy.
 </td>
 <td>1.9
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="States">States</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=11" class="mw-editsection-visualeditor" title="Edit section: States">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=11" title="Edit section: States">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>These effects in particular are country-scoped effects that are related to states rather than effects within the state scope.
-</p>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">State-related country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="add_state_core">
 <td>add_state_core
 </td>
@@ -2803,24 +2702,6 @@ Old capital is remembered, if not specified otherwise.
 </td>
 <td>1.0
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Mana">Mana</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=12" class="mw-editsection-visualeditor" title="Edit section: Mana">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=12" title="Edit section: Mana">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>Mana in this usage means political power, stability, war support, and other values in the topbar. Fuel is, instead, in the <a href="#Resources">resources section</a>, while convoys can be added/removed with <a href="#add_equipment_to_stockpile">add_equipment_to_stockpile</a>.
-</p>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Mana-related country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
 </th></tr>
 <tr id="add_political_power">
 <td>add_political_power
@@ -2967,23 +2848,6 @@ Old capital is remembered, if not specified otherwise.
 </td>
 <td>1.0
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Politics">Politics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=13" class="mw-editsection-visualeditor" title="Edit section: Politics">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=13" title="Edit section: Politics">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Political country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="set_politics">
 <td>set_politics
 </td>
@@ -3106,25 +2970,6 @@ You can use ideology = ROOT to increase the popularity of the currently ruling p
 </td>
 <td>1.0
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Balance_of_power">Balance of power</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=14" class="mw-editsection-visualeditor" title="Edit section: Balance of power">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=14" title="Edit section: Balance of power">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>Balance of power is defined in <span class="inline-sup" style="background-color:#f9f9f9; color:DarkSlateGray; border:1px solid #dcdcdc; font-family: monospace,Courier; white-space:nowrap">/Hearts of Iron IV/common/bop/*.txt</span> files.
-</p>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Balance of power-related country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="set_power_balance">
 <td>set_power_balance
 </td>
@@ -3253,23 +3098,6 @@ gfx = &lt;sprite&gt;<br />The sprite to change the GFX to.
 </td>
 <td>1.12
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Diplomacy">Diplomacy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=15" class="mw-editsection-visualeditor" title="Edit section: Diplomacy">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=15" title="Edit section: Diplomacy">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap"><span style="white-space:nowrap">Diplomatic country-scoped effects:<br /></span>
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="set_major">
 <td>set_major
 </td>
@@ -3754,25 +3582,6 @@ gfx = &lt;sprite&gt;<br />The sprite to change the GFX to.
 </td>
 <td>1.13
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Autonomy">Autonomy</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=16" class="mw-editsection-visualeditor" title="Edit section: Autonomy">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=16" title="Edit section: Autonomy">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p><span id="Subjects"></span>
-</p>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Autonomy-related country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="puppet">
 <td>puppet
 </td>
@@ -3870,23 +3679,6 @@ end_civil_wars = &lt;yes/no&gt;<br />Will end any civil wars the subject is subj
 </td>
 <td>1.3
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Governments_in_exile">Governments in exile</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=17" class="mw-editsection-visualeditor" title="Edit section: Governments in exile">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=17" title="Edit section: Governments in exile">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Government in exile-related country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="add_legitimacy">
 <td>add_legitimacy
 </td>
@@ -3939,23 +3731,6 @@ end_civil_wars = &lt;yes/no&gt;<br />Will end any civil wars the subject is subj
 </td>
 <td>1.6
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="War">War</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=18" class="mw-editsection-visualeditor" title="Edit section: War">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=18" title="Edit section: War">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">War-related country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="add_threat">
 <td>add_threat
 </td>
@@ -4336,23 +4111,6 @@ nuke_type = &lt;nuke_type&gt;<br />type of nuke to use (e.g. nuclear_bomb, therm
 </td>
 <td>1.6
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Resources">Resources</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=19" class="mw-editsection-visualeditor" title="Edit section: Resources">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=19" title="Edit section: Resources">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Resource-related country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="country_add_resource">
 <td>add_resource
 </td>
@@ -4468,23 +4226,6 @@ resources = { &lt;resource&gt; &lt;...&gt; &lt;resource&gt; }<br />The resources
 </td>
 <td>1.6
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Buildings">Buildings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=20" class="mw-editsection-visualeditor" title="Edit section: Buildings">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=20" title="Edit section: Buildings">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Building-related country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="add_offsite_building">
 <td>add_offsite_building
 </td>
@@ -4553,30 +4294,6 @@ province = &lt;id&gt; / &lt;variable&gt;<br />The province to target for provinc
 </td>
 <td>1.3
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="National_focuses">National focuses</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=21" class="mw-editsection-visualeditor" title="Edit section: National focuses">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=21" title="Edit section: National focuses">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<table class="metadata plainlinks ambox mbox-small-left ambox-notice" style="">
-<tbody><tr>
-<td class="mbox-image">
-  <img alt="Ambox outdated info.png" src="https://central.paradoxwikis.com/images/thumb/6/65/Ambox_outdated_info.png/22px-Ambox_outdated_info.png" decoding="async" loading="lazy" width="22" height="22" data-file-width="50" data-file-height="50" /></td>
-<td class="mbox-text" style=""> <div style="font-size:85%;">This is a community maintained wiki. If you spot a mistake, please help with fixing it.</div> </td>
-</tr>
-</tbody></table>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">National focus-related country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="15%">Parameters
-</th>
-<th width="20%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="30%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="load_focus_tree">
 <td>load_focus_tree
 </td>
@@ -4687,23 +4404,6 @@ originator_name = &lt;string&gt;<br />Used for tooltip only.<br />
 </td>
 <td>1.15
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Decisions">Decisions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=22" class="mw-editsection-visualeditor" title="Edit section: Decisions">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=22" title="Edit section: Decisions">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Decision-related country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="activate_decision">
 <td>activate_decision
 </td>
@@ -4836,23 +4536,6 @@ originator_name = &lt;string&gt;<br />Used for tooltip only.<br />
 </td>
 <td>1.11
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Missions">Missions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=23" class="mw-editsection-visualeditor" title="Edit section: Missions">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=23" title="Edit section: Missions">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Mission-related country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="activate_mission">
 <td>activate_mission
 </td>
@@ -4910,23 +4593,6 @@ originator_name = &lt;string&gt;<br />Used for tooltip only.<br />
 </td>
 <td>1.9
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Technologies_and_doctrines">Technologies and doctrines</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=24" class="mw-editsection-visualeditor" title="Edit section: Technologies and doctrines">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=24" title="Edit section: Technologies and doctrines">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Technology-related country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="add_research_slot">
 <td>add_research_slot
 </td>
@@ -5086,25 +4752,6 @@ category = &lt;doctrine category&gt;<br />Which doctrine category the cost reduc
 </td>
 <td>1.15
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Ideas">Ideas</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=25" class="mw-editsection-visualeditor" title="Edit section: Ideas">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=25" title="Edit section: Ideas">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>This includes national spirits, laws, designers, and advisors (using the idea_token)
-</p>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Idea-related country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="add_ideas">
 <td>add_ideas
 </td>
@@ -5231,23 +4878,6 @@ years = &lt;int&gt; / &lt;variable&gt;<br />The number of years to modify the id
 </td>
 <td>1.0
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Units">Units</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=26" class="mw-editsection-visualeditor" title="Edit section: Units">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=26" title="Edit section: Units">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Unit-related country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="load_oob">
 <td>load_oob
 </td>
@@ -5571,23 +5201,6 @@ location = &lt;province&gt;<br />Location where the railway gun is created. Assu
 </td>
 <td>???
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Equipment">Equipment</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=27" class="mw-editsection-visualeditor" title="Edit section: Equipment">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=27" title="Edit section: Equipment">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Equipment-related country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="set_equipment_fraction">
 <td>set_equipment_fraction
 </td>
@@ -5900,23 +5513,6 @@ bonus = { ... }<br />Bonus.
 </td>
 <td>1.16
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Military">Military</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=28" class="mw-editsection-visualeditor" title="Edit section: Military">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=28" title="Edit section: Military">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Military-related country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="destroy_ships">
 <td>destroy_ships
 </td>
@@ -6040,23 +5636,6 @@ is_female = &lt;bool&gt;<br />The gender of the ace.
 </td>
 <td>1.0
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Intelligence">Intelligence</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=29" class="mw-editsection-visualeditor" title="Edit section: Intelligence">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=29" title="Edit section: Intelligence">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Intelligence-related country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="create_intelligence_agency">
 <td>create_intelligence_agency
 </td>
@@ -6314,25 +5893,6 @@ uses = &lt;int&gt;<br />How many times the bonus can be used.
 </td>
 <td>1.9
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Characters">Characters</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=30" class="mw-editsection-visualeditor" title="Edit section: Characters">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=30" title="Edit section: Characters">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>These are the character-related effects in the country scope. For effects in character scope, see <a href="#Character_scope">§ Character scope</a>.
-</p>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Character-related country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="set_nationality">
 <td>set_nationality
 </td>
@@ -6463,23 +6023,6 @@ trait = &lt;trait&gt;<br />The trait to remove.
 </td>
 <td>1.11
 </td></tr></tbody></table>
-<h4><span class="mw-headline" id="Unit_leaders">Unit leaders</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=31" class="mw-editsection-visualeditor" title="Edit section: Unit leaders">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=31" title="Edit section: Unit leaders">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Unit leader-related country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="create_corps_commander">
 <td>create_corps_commander
 </td>
@@ -6678,23 +6221,6 @@ legacy_id = &lt;int&gt;<br />The legacy ID used for the unit leader. Optional.
 </td>
 <td>1.11
 </td></tr></tbody></table>
-<h4><span class="mw-headline" id="Country_leaders">Country leaders</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=32" class="mw-editsection-visualeditor" title="Edit section: Country leaders">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=32" title="Edit section: Country leaders">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Country leader-related country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="create_country_leader">
 <td>create_country_leader
 </td>
@@ -6944,23 +6470,6 @@ ideology = &lt;ideology type&gt;<br />The ideology type used by the country lead
 </td>
 <td>1.6
 </td></tr></tbody></table>
-<h4><span class="mw-headline" id="Advisors">Advisors</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=33" class="mw-editsection-visualeditor" title="Edit section: Advisors">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=33" title="Edit section: Advisors">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Advisor-related country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="activate_advisor">
 <td>activate_advisor
 </td>
@@ -7051,23 +6560,6 @@ value = &lt;bool&gt;<br />The value to set.
 </td>
 <td>1.12.8
 </td></tr></tbody></table>
-<h4><span class="mw-headline" id="Scientists">Scientists</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=34" class="mw-editsection-visualeditor" title="Edit section: Scientists">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=34" title="Edit section: Scientists">edit source</a><span class="mw-editsection-bracket">]</span></span></h4>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Scientist-related country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="add_scientist_role">
 <td>add_scientist_role
 </td>
@@ -7133,25 +6625,6 @@ traits = { &lt;trait&gt; }<br />Optional array.
 </td>
 <td>1.15
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="MIOs">MIOs</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=35" class="mw-editsection-visualeditor" title="Edit section: MIOs">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=35" title="Edit section: MIOs">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>These are the MIO-related effects in the country scope. For effects in <a href="/Military_industrial_organisation" class="mw-redirect" title="Military industrial organisation">military industrial organisation</a> scope, see <a href="#MIO_scope">§ MIO scope</a>.
-</p>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">MIO-related country-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="show_mio_tooltip">
 <td>show_mio_tooltip
 </td>
@@ -7272,25 +6745,6 @@ show_modifiers = &lt;bool&gt;<br />Whether the trait's modifiers should be shown
 </td>
 <td>1.13
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Special_Projects">Special Projects</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=36" class="mw-editsection-visualeditor" title="Edit section: Special Projects">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=36" title="Edit section: Special Projects">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>These are special project related effects in the country scope.
-</p>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption><span style="white-space:nowrap">Special project-related country-scoped effects:</span><br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="complete_special_project">
 <td>complete_special_project
 </td>
@@ -7366,25 +6820,6 @@ show_modifiers = &lt;bool&gt;<br />Optional, default = yes.<br />
 </td>
 <td>1.15
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Career_profile">Career profile</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=37" class="mw-editsection-visualeditor" title="Edit section: Career profile">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=37" title="Edit section: Career profile">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>These are career profile related effects in the country scope.
-</p>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption><span style="white-space:nowrap">Career profile-related country-scoped effects:</span><br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="career_profile_step_missiolini">
 <td>career_profile_step_missiolini
 </td>
@@ -7398,25 +6833,6 @@ show_modifiers = &lt;bool&gt;<br />Optional, default = yes.<br />
 </td>
 <td>???
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=38" class="mw-editsection-visualeditor" title="Edit section: History">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=38" title="Edit section: History">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>These effects can <b>only be used within history files</b>, failing when used outside. However, they're considered effects anyway rather than history arguments, as they can be used in if statements.
-</p>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Effects to be used in country history files:
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="recruit_character">
 <td>recruit_character
 </td>
@@ -7516,25 +6932,6 @@ show_modifiers = &lt;bool&gt;<br />Optional, default = yes.<br />
 </td>
 <td>1.0
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Variable">Variable</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=39" class="mw-editsection-visualeditor" title="Edit section: Variable">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=39" title="Edit section: Variable">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>These are variable related effects in the country scope.
-</p>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption><span style="white-space:nowrap">Variable-related country-scoped effects:</span><br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="get_highest_scored_country_temp">
 <td>get_highest_scored_country_temp
 </td>
@@ -7614,26 +7011,6 @@ need = &lt;bool&gt;<br />Default no. If yes, gets the number of needed vehicles.
 </td>
 <td>???
 </td></tr></tbody></table>
-<h2><span class="mw-headline" id="State_scope">State scope</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=40" class="mw-editsection-visualeditor" title="Edit section: State scope">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=40" title="Edit section: State scope">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>The effects here must be used within a <b>state</b> scope.
-</p>
-<h3><span class="mw-headline" id="General_3">General</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=41" class="mw-editsection-visualeditor" title="Edit section: General">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=41" title="Edit section: General">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">General state-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="state_event">
 <td>state_event
 </td>
@@ -8143,23 +7520,6 @@ The following arguments go within division = "":<br />
 </td>
 <td>1.15
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Buildings_2">Buildings</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=42" class="mw-editsection-visualeditor" title="Edit section: Buildings">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=42" title="Edit section: Buildings">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Building-related state-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="add_extra_state_shared_building_slots">
 <td>add_extra_state_shared_building_slots
 </td>
@@ -8344,26 +7704,6 @@ level = &lt;int&gt; / &lt;variable&gt;<br />The levels to remove.
 </td>
 <td>1.15
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Resistance_and_compliance">Resistance and compliance</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=43" class="mw-editsection-visualeditor" title="Edit section: Resistance and compliance">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=43" title="Edit section: Resistance and compliance">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p><span id="Resistance"></span>
-<span id="Compliance"></span>
-</p>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Resistance-related state-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="add_compliance">
 <td>add_compliance
 </td>
@@ -8584,23 +7924,6 @@ level = &lt;int&gt; / &lt;variable&gt;<br />The levels to remove.
 </td>
 <td>1.12
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Raids">Raids</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=44" class="mw-editsection-visualeditor" title="Edit section: Raids">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=44" title="Edit section: Raids">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Raid-releated state-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="raid_reduce_project_progress_ratio">
 <td>raid_reduce_project_progress_ratio
 </td>
@@ -8614,26 +7937,6 @@ level = &lt;int&gt; / &lt;variable&gt;<br />The levels to remove.
 </td>
 <td>1.15
 </td></tr></tbody></table>
-<h2><span class="mw-headline" id="Character_scope">Character scope</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=45" class="mw-editsection-visualeditor" title="Edit section: Character scope">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=45" title="Edit section: Character scope">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>The effects here must be used within a <b>character</b> scope.
-</p>
-<h3><span class="mw-headline" id="General_4">General</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=46" class="mw-editsection-visualeditor" title="Edit section: General">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=46" title="Edit section: General">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">General character-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="set_character_flag">
 <td>set_character_flag
 </td>
@@ -9070,25 +8373,6 @@ promote_leader = &lt;bool&gt;<br />Will promote the leader to be the leader of t
 </td>
 <td>1.12.8
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Unit_leaders_2">Unit leaders</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=47" class="mw-editsection-visualeditor" title="Edit section: Unit leaders">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=47" title="Edit section: Unit leaders">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>These can only be used with characters of the unit leader type.
-</p>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">General unit leader-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="unit_leader_event">
 <td>unit_leader_event
 </td>
@@ -9306,25 +8590,6 @@ days = &lt;int&gt;<br />The amount of days that the flag should last for before 
 </td>
 <td>1.11
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Country_leaders_2">Country leaders</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=48" class="mw-editsection-visualeditor" title="Edit section: Country leaders">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=48" title="Edit section: Country leaders">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p>These can only be used with characters of the country leader type.
-</p>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Country leader-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="add_country_leader_trait">
 <td>add_country_leader_trait
 </td>
@@ -9387,23 +8652,6 @@ ideology = &lt;sub-ideology&gt;<br />Sub-ideology of the leader where to swap tr
 </td>
 <td>1.11
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Combat">Combat</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=49" class="mw-editsection-visualeditor" title="Edit section: Combat">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=49" title="Edit section: Combat">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Combat-related unit leader-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="supply_units">
 <td>supply_units
 </td>
@@ -9547,23 +8795,6 @@ ideology = &lt;sub-ideology&gt;<br />Sub-ideology of the leader where to swap tr
 </td>
 <td>1.5
 </td></tr></tbody></table>
-<h3><span class="mw-headline" id="Operatives">Operatives</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=50" class="mw-editsection-visualeditor" title="Edit section: Operatives">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=50" title="Edit section: Operatives">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Operative-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="add_nationality">
 <td>add_nationality
 </td>
@@ -9690,25 +8921,6 @@ ideology = &lt;sub-ideology&gt;<br />Sub-ideology of the leader where to swap tr
 </td>
 <td>1.9
 </td></tr></tbody></table>
-<h2><span class="mw-headline" id="Division_scope">Division scope</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=51" class="mw-editsection-visualeditor" title="Edit section: Division scope">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=51" title="Edit section: Division scope">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>The effects here must be used within a <b>division</b> scope.
-</p>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Division-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="destroy_unit">
 <td>destroy_unit
 </td>
@@ -9824,25 +9036,6 @@ allow = &lt;bool&gt;<br />Whether a medal can be awarded to the division over th
 </td>
 <td>1.13
 </td></tr></tbody></table>
-<h2><span class="mw-headline" id="MIO_scope">MIO scope</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=52" class="mw-editsection-visualeditor" title="Edit section: MIO scope">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=52" title="Edit section: MIO scope">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>The effects here must be used within a <b>military industrial organisation</b> scope. 
-</p>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">MIO-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="add_mio_funds">
 <td>add_mio_funds
 </td>
@@ -10187,25 +9380,6 @@ days = &lt;int&gt;<br />The amount of days that the flag should last for before 
 </td>
 <td>1.13
 </td></tr></tbody></table>
-<h2><span class="mw-headline" id="Contract_scope">Contract scope</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=53" class="mw-editsection-visualeditor" title="Edit section: Contract scope">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=53" title="Edit section: Contract scope">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>The effects here must be used within a <b>contract</b> scope.
-</p>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Contract-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="cancel_purchase_contract">
 <td>cancel_purchase_contract
 </td>
@@ -10219,25 +9393,6 @@ days = &lt;int&gt;<br />The amount of days that the flag should last for before 
 </td>
 <td>1.13
 </td></tr></tbody></table>
-<h2><span class="mw-headline" id="Raid_scope">Raid scope</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=54" class="mw-editsection-visualeditor" title="Edit section: Raid scope">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=54" title="Edit section: Raid scope">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>The effects here must be used within a <b>raid</b> scope.
-</p>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Raid-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="add_raid_history_entry">
 <td>add_raid_history_entry
 </td>
@@ -10308,25 +9463,6 @@ raid_damage_units = {
 </td>
 <td>1.15
 </td></tr></tbody></table>
-<h2><span class="mw-headline" id="Special_Project_scope">Special Project scope</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=55" class="mw-editsection-visualeditor" title="Edit section: Special Project scope">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=55" title="Edit section: Special Project scope">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>The effects here must be used within a <b>special project</b> scope. Special projects must always be pre-pended with sp:&lt;special project&gt; when used a a scope or value.
-</p>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">special_project-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="add_project_progress_ratio">
 <td>add_project_progress_ratio
 </td>
@@ -10418,25 +9554,6 @@ days = &lt;int&gt;<br />The amount of days that the flag should last for before 
 </td>
 <td>1.15
 </td></tr></tbody></table>
-<h2><span class="mw-headline" id="Other_scopes">Other scopes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=56" class="mw-editsection-visualeditor" title="Edit section: Other scopes">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=56" title="Edit section: Other scopes">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>The effects here must be used within a scope that's specified within the notes.
-</p>
-<table class="wikitable sortable mw-collapsible" style="display: inline-block; padding: 5px" width="100%">
-<caption class="nowrap">Otherwise-scoped effects:<br />
-</caption>
-<tbody><tr>
-<th width="10%">Name
-</th>
-<th width="25%">Parameters
-</th>
-<th width="25%">Examples
-</th>
-<th width="20%">Description
-</th>
-<th width="15%">Notes
-</th>
-<th width="5%">Version Added
-</th></tr>
 <tr id="execute_operation_coordinated_strike">
 <td>execute_operation_coordinated_strike
 </td>
@@ -10452,132 +9569,6 @@ days = &lt;int&gt;<br />The amount of days that the flag should last for before 
 </td>
 <td>1.9
 </td></tr></tbody></table>
-<h2><span class="mw-headline" id="Flow_control">Flow control</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=57" class="mw-editsection-visualeditor" title="Edit section: Flow control">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=57" title="Edit section: Flow control">edit source</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>These scopes are used within effect scopes to control the execution of effects.
-</p>
-<h3><span class="mw-headline" id="If_statements">If statements</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=58" class="mw-editsection-visualeditor" title="Edit section: If statements">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=58" title="Edit section: If statements">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p><span id="if"></span><span id="else"></span><span id="else_if"></span>
-An <a href="http://en.wikipedia.org/wiki/Conditional_(computer_programming)#If–then(–else)" class="extiw" title="wp:Conditional (computer programming)">if statement</a> allows an execution of effects to only be done if certain <a href="/Triggers" title="Triggers">triggers</a> are met. Conditional statements are represented with the if = { ... } effect. limit = { ... } inside of the if statement serves as a <a href="/Triggers" title="Triggers">trigger block</a> that defines the conditions when it should be executed, and everything else directly inside of if = { ... } is interpreted as the effects that should be executed if the condition is true.
-</p><p>For example, the following will add 10% <a href="/Stability" title="Stability"><img alt="Stability" src="/images/thumb/a/ae/Stability.png/22px-Stability.png" decoding="async" loading="lazy" width="22" height="22" data-file-width="27" data-file-height="27" /></a><a href="/Stability" class="mw-redirect" title="Stability">Stability</a> to the country this is executed on if it has positive <a href="/Government#Political_power" title="Political Power"><img alt="Political Power" src="/images/thumb/2/24/Political_power.png/22px-Political_power.png" decoding="async" loading="lazy" width="22" height="22" data-file-width="27" data-file-height="27" /></a><a href="/Government#Political_power" title="Government">Political Power</a> and below 90% stability:
-</p>
-<pre>if = {
-    limit = {
-        has_political_power &gt; 0
-        stability &lt; 0.9
-    }
-    add_stability = 0.1
-}</pre>
-<p>If the limit is not met, then none of the effects inside will be executed. If it is, then each one will be. If the limit is omitted, it defaults to being always true.
-</p><p><b>The effects must be inside of the if statement to be tied to the limit</b>. For example, this will always give 100 <a href="/Government#Political_power" title="Political Power"><img alt="Political Power" src="/images/thumb/2/24/Political_power.png/22px-Political_power.png" decoding="async" loading="lazy" width="22" height="22" data-file-width="27" data-file-height="27" /></a><a href="/Government#Political_power" title="Government">Political Power</a>, regardless of what country is played:
-</p>
-<pre>if = {
-    limit = { tag = BHR }
-}                         # Closes if = { ... }. Since no effects are inside, this means that the if statement does absolutely nothing
-add_political_power = 100 # Outside of if = { ... }, so it will always give 100 political power, even if not playing as BHR</pre>
-<p>Optionally, else_if = { ... } (with limit = { ... } serving in a similar fashion) and else = { ... } can be added. If the initial limit within if = { ... } is false, it moves on to the next else_if = { ... }, checking the limit there. If the limit there is false, then it moves on to the next one, until hitting an end or an else = { ... }.<br />
-Two variants exist: nested and unnested. In the first case, the else_if or else is put directly inside of the preceding if or else_if, while in the second case it's put <i>right after</i>. In case of overlap, unnested if statements are preferred. Here is an example using unnested if statements:
-</p>
-<pre>if = {
-    limit = {
-        stability &lt; 0.3 # If stability is below 30%, add 30%.
-    }
-    add_stability = 0.3
-}
-else_if = {
-    limit = {
-        stability &lt; 0.6 # Otherwise, if it's below 60% (i.e. 30-59%), add 20%
-    }
-    add_stability = 0.2
-}
-else = {
-    add_stability = 0.1 # If there's 60-100% stability, add 10%
-}
-</pre>
-<p>Within the tooltip, only effects that would be executed are shown. The effects within an unfulfilled if statement (or an else/else_if that's not read due to the if statement being met) will be hidden from the player, and so will the trigger. In order to avoid player confusion, <a href="#Effect_tooltips">custom effect tooltips can be used to tell the player what this effect block would do</a>, such as being used within an else.
-</p>
-<h3><span class="mw-headline" id="Random_effects">Random effects</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=59" class="mw-editsection-visualeditor" title="Edit section: Random effects">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=59" title="Edit section: Random effects">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<p><span id="random"></span><span id="random_list"></span>
-If you want an effect to have a random chance to be done or have nothing happen otherwise, the random = { ... } block is the simplest way to accomplish that:
-</p>
-<pre>random = {
-    chance = 80
-    add_stability = 0.4
-    add_war_support = 0.3
-}</pre>
-<p>This in particular will have an 80% chance to add 40% stability and 30% war support and, accordingly, a 20% chance to do nothing. The chance here is on the scale from 0 to 100.
-</p><p>If you want the game to choose between effect blocks, random_list can be used instead. For example, if you wanted an effect to randomly given the player one out of four bonuses, you'd do the following:
-</p>
-<pre>random_list = {
-    10 = {
-        add_stability = 0.5
-    }
-    10 = {
-        add_manpower = 10000
-    }
-    10 = {
-        add_war_support = 0.5
-    }
-    10 = {
-        army_experience = 100
-    }
-}
-</pre><p>The number is not the chance, but the weight for each option, as they don't have to add up to 100 or any number. An option with the weight of 20 is twice as likely to be picked as the option with the chance of 10, for instance. In total, the probability for an option to be picked is equal to the weight of the option divided by the sum of all weights.
-</p><p>It is also possible to use modifiers (akin to <a href="/MTTH" class="mw-redirect" title="MTTH">MTTH blocks</a>) to affect the weight of each possible random effect or to use <a href="/Variables" class="mw-redirect" title="Variables">variables</a> as chances.
-</p>
-<pre>random_list = {
-    30 = {
-        modifier = {
-            factor = 1.3
-            has_country_flag = inward_perfect_flag
-        }
-        add_stability = 0.5
-    }
-    25 = {
-        add_manpower = 10000
-    }
-    20 = {
-        add_war_support = 0.5
-    }
-    my_variable = { # Taking "my_variable" as the variable's name, both "var:my_variable" and "my_variable" are valid options, left up to the developer's preference.
-        army_experience = 100
-    }
-}
-</pre>
-<p>If the country flag inward_perfect_flag is set, it'll multiply the above chance of 30 by 1.3 to get 39. Meanwhile, my_variable will take the value of the according temp variable or the current scope's variable as the weight of the option.
-</p><p>Note that if you want to create a repeatable decision including a random list, by default the same decision will pick the same random result every time it is triggered in a game. You can reverse this behaviour by including the following line in the decision block:
-</p>
-<pre>fixed_random_seed = no
-</pre>
-<p><b>This is only for decisions</b>. Elsewhere, random seed is unfixed by default, making this argument unnecessary to set to "no".<br />
-</p>
-<h3><span class="mw-headline" id="Tooltip_manipulation">Tooltip manipulation</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/index.php?title=Effect&amp;veaction=edit&amp;section=60" class="mw-editsection-visualeditor" title="Edit section: Tooltip manipulation">edit</a><span class="mw-editsection-divider"> | </span><a href="/index.php?title=Effect&amp;action=edit&amp;section=60" title="Edit section: Tooltip manipulation">edit source</a><span class="mw-editsection-bracket">]</span></span></h3>
-<dl><dd><i>See also: <a href="/Localisation" title="Localisation">Localisation</a></i><br /></dd></dl>
-<p><span id="Effect_tooltip"></span><span id="effect_tooltip"></span><span id="Effect_tooltips"></span><span id="Hidden_effect"></span><span id="hidden_effect"></span>
-The "tooltip" in this case refers to the text shown to the player in-game that explains what the effect block changes within the game, such as "<span style="color: green; ; white-space:nowrap"><b>+50</b></span> <a href="/Government#Political_power" title="Political Power"><img alt="Political Power" src="/images/thumb/2/24/Political_power.png/22px-Political_power.png" decoding="async" loading="lazy" width="22" height="22" data-file-width="27" data-file-height="27" /></a><a href="/Government#Political_power" title="Government">Political Power</a>".
-</p><p>There are 3 ways to edit the tooltip within an effect block:
-</p>
-<ul><li>hidden_effect = { ... } is used in order to hide the effects within from the tooltip, making their execution not get shown to the player.</li>
-<li>effect_tooltip = { ... } is, instead, used in order to put the effects into the tooltip without actually executing them.</li>
-<li>custom_effect_tooltip = my_localisation_key is used in order to put an arbitrary paragraph of text as an effect that will get executed.</li></ul>
-<p>For example, this sample <a href="/National_focus_modding" title="National focus modding">focus' completion reward</a> utilises all three:
-</p>
-<pre>completion_reward = { 
-    hidden_effect = {
-        every_subject_country = { country_event = my_event.1 }
-    }
-    custom_effect_tooltip = send_event_to_subjects_tt
-    effect_tooltip = {
-        add_political_power = 100
-    }
-    custom_effect_tooltip = reject_war_tt
-}</pre>
-<p>In this case, send_event_to_subjects_tt and reject_war_tt are localisation keys defined within any <span class="inline-sup" style="background-color:#f9f9f9; color:DarkSlateGray; border:1px solid #dcdcdc; font-family: monospace,Courier; white-space:nowrap">/Hearts of Iron IV/localisation/english/*_l_english.yml</span> file encoded with UTF-8-BOM, assuming the English language.
-</p>
-<pre> send_event_to_subjects_tt: "Sends a demand to our every subject.\nIf they agree, we get the following for each subject:"
- reject_war_tt: "If they reject the demand, we gain a wargoal against them."
-</pre>
-<p>In-game, this will appear as such:
-</p>
 <table class="eu4box-inline" style="padding: 1px;">
 
 <tbody><tr>

@@ -728,4 +728,21 @@ public class LinkedList<T> {
         return ret;
     }
     
+    /**
+     * Method that returns the index at which a target is stored in the LinkedList.
+     * Returns -1 if there is no elements containing target.
+     * @param target
+     * @return int index
+     */
+    public int containedIndex(T target)
+    {
+        for(int i = 0; i<size(); i++) {
+            if(get(i).equals(target)) {
+                return i;
+            }
+        }
+        
+        return -1;
+    }
+    
 }

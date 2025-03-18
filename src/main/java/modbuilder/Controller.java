@@ -88,7 +88,12 @@ public class Controller {
         for(int i = 0; i<contents.size(); i++)
         {
             if(contents.get(i).contains("<tr")) {
-                exampleCommands.add(new Command(contents.get(i+1), contents.get(i+9)));
+                LinkedList<String> row = extractTableRow(i, contents);
+                LinkedList<String> cleanedRow = cleanRow(row);
+                LinkedList<String> parsedRow = htmlParseRow(cleanedRow);
+                LinkedList<String> elements = getRowElements(parsedRow);
+                System.out.println(elements);
+                exampleCommands.add(new Command(elements.get(0), elements.get(1), elements.get(2)));
             }
         }
     }
@@ -136,8 +141,8 @@ public class Controller {
         LinkedList<String> ret = new LinkedList<String>();
         
         ret.add(parsedRow.get(0));
-        ret.add(parsedRow.get(3));
         ret.add(parsedRow.get(4));
+        ret.add(parsedRow.get(3));
         
         return ret;
     }
@@ -147,7 +152,7 @@ public class Controller {
      * @param row
      * @return LinkedList<String> parsedRow
      */
-    public LinkedList<String> htmlRowParser(LinkedList<String> row) //to be written
+    public LinkedList<String> htmlParseRow(LinkedList<String> row) //to be written
     {
         LinkedList<String> parsedRow = new LinkedList<String>();
         
@@ -159,6 +164,45 @@ public class Controller {
         }
         
         return parsedRow;
+    }
+    
+    /**
+     * Method that cleans a row so that multi-line elements are saved in a
+     * single string and therefore at a single index within the LinkedList
+     * that is returned
+     * @param uncleanedRow
+     * @return LinkedList<String> cleanRow
+     */
+    public LinkedList<String> cleanRow(LinkedList<String> uncleanedRow)
+    {
+        LinkedList<String> ret = new LinkedList<String>();
+        int counter = 0;
+        int init = 0;
+        int fin = 0;
+        
+        for(int i = 0; i<uncleanedRow.size(); i++) {
+            if(counter%2==0 && uncleanedRow.get(i).contains("<td")) {
+                counter++;
+                init = i;
+            }
+            
+            if(counter%2==1 && uncleanedRow.get(i).contains("td>")) {
+                fin = i;
+                counter++;
+                
+                String s = "";
+                
+                for(int j = init; j<fin; j++) {
+                    s += uncleanedRow.get(j) + "\n";
+                }
+                
+                s += uncleanedRow.get(fin);
+                
+                ret.add(s);
+            }
+        }
+        
+        return ret;
     }
     
 }
